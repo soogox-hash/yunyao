@@ -32,4 +32,4 @@ createServer(async(request,response)=>{
     if(target!==root&&!target.startsWith(root+sep)||relative.startsWith('.preview-data'))return response.writeHead(403).end('Forbidden');
     try{const data=await readFile(target);response.writeHead(200,{'Content-Type':types[extname(target)]||'application/octet-stream','Cache-Control':'no-store','X-Content-Type-Options':'nosniff'});response.end(data);}catch{response.writeHead(404).end('Not found');}
   }catch(error){json(response,error.message==='request_too_large'?413:400,{error:error.message||'bad_request'});}
-}).listen(port,'127.0.0.1',()=>console.log(`云遥骑行预览服务：http://127.0.0.1:${port}/`));
+}).listen(port,'0.0.0.0',()=>console.log(`云遥骑行预览服务：http://0.0.0.0:${port}/`));
