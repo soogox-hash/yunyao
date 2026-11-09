@@ -14,8 +14,8 @@
 .x-card { border: 1px solid var(--line); border-radius: 16px; background: var(--panel); padding: 14px; }
 .x-challenge b { display: block; font-size: 13px; font-weight: 700; }
 .x-pct { font-size: 18px; font-weight: 800; color: var(--orange); font-variant-numeric: tabular-nums; }
-.x-bar { height: 7px; margin-top: 11px; border-radius: 99px; background: #0d131a; overflow: hidden; }
-.x-bar i { display: block; height: 100%; width: 0; border-radius: 99px; background: linear-gradient(90deg, #b34d12, var(--orange)); box-shadow: 0 0 12px rgba(255, 121, 37, .45); transition: width .9s cubic-bezier(.22, 1, .36, 1); }
+.x-bar { height: 11px; margin-top: 11px; border-radius: 99px; background: #0d131a; overflow: visible; }
+.x-bar i { display: block; height: 100%; width: 0; border-radius: 99px; background: linear-gradient(90deg, #b34d12, var(--orange)); box-shadow: 0 0 10px rgba(255, 121, 37, .85), 0 0 22px rgba(255, 121, 37, .6), 0 0 40px rgba(255, 121, 37, .4); transition: width .9s cubic-bezier(.22, 1, .36, 1); }
 .x-bar-meta { display: flex; justify-content: space-between; margin-top: 7px; font-size: 10px; color: var(--muted); }
 
 .x-recent { display: flex; flex-direction: column; gap: 9px; }
