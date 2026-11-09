@@ -1,0 +1,2 @@
+/* Keep the live speed gauge centered in the free area below the status line. */
+.live .speed-gauge{top:19%}

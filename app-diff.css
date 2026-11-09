@@ -1,0 +1,144 @@
+/* 云遥 · 差异化能力样式（训练解读 / 体能仪表盘 / 同路段 PK / PR）
+ * 沿用深色 + 橙色主题，不使用绿色 */
+.d-card {
+  margin-top: 12px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--panel);
+}
+.d-card p { margin: 0; }
+
+.d-ready-card { background: linear-gradient(180deg, #141b23 0%, #0d131a 100%); }
+.d-ready-head { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; }
+.d-ready-head span { font-size: 10.5px; letter-spacing: .04em; color: var(--muted); }
+.d-ready-head b { font-size: 13px; font-weight: 800; }
+.d-fuel { height: 8px; margin-top: 11px; border-radius: 99px; background: #0b1117; overflow: hidden; border: 1px solid rgba(255,255,255,.04); }
+.d-fuel i { display: block; height: 100%; width: 0; border-radius: 99px; background: linear-gradient(90deg, #b34d12, var(--orange)); box-shadow: 0 0 12px rgba(255,121,37,.4); transition: width .9s cubic-bezier(.22,1,.36,1); }
+.d-fuel-meta { display: flex; justify-content: space-between; gap: 8px; margin-top: 6px; font-size: 9.5px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.d-ready-advice { margin-top: 10px !important; font-size: 12px; line-height: 1.6; color: #d8dee7; }
+.d-ready-foot { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-top: 10px; padding-top: 9px; border-top: 1px solid rgba(255,255,255,.05); }
+.d-ready-foot span { font-size: 10px; color: var(--muted); }
+.d-ready-foot button, .d-link {
+  flex: none;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--orange);
+  font: inherit;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* 骑行报告：人话解读 */
+.d-verdict { margin-top: 14px; padding: 16px; border: 1px solid rgba(255,121,37,.28); border-radius: 18px; background: linear-gradient(160deg, rgba(255,121,37,.14), rgba(13,19,26,.9) 62%); }
+.d-verdict small { display: block; font-size: 9.5px; letter-spacing: .12em; color: var(--orange); }
+.d-verdict h2 { margin: 7px 0 0; font-size: 18px; font-weight: 800; line-height: 1.4; color: var(--white); }
+.d-verdict h2 span { color: var(--orange); }
+.d-verdict p { margin-top: 8px !important; font-size: 12px; line-height: 1.65; color: #c9d2e0; }
+.d-verdict p b { color: var(--white); font-variant-numeric: tabular-nums; }
+.d-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 11px; }
+.d-tags span { padding: 4px 9px; border: 1px solid rgba(255,121,37,.34); border-radius: 99px; background: rgba(255,121,37,.1); font-size: 10px; color: #ffc79e; }
+
+.d-zone-card { margin-top: 12px; padding: 14px; border: 1px solid var(--line); border-radius: 16px; background: var(--panel); }
+.d-zone-head { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; }
+.d-zone-head b { font-size: 12.5px; font-weight: 800; }
+.d-zone-head span { font-size: 9.5px; color: var(--muted); text-align: right; }
+.d-zone-bar { display: flex; height: 10px; margin-top: 11px; border-radius: 99px; overflow: hidden; background: #0b1117; }
+.d-zone-bar i { display: block; height: 100%; transition: width .8s ease; }
+.d-zone-legend { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 12px; margin-top: 11px; }
+.d-zone-legend > div { display: flex; align-items: center; gap: 6px; font-size: 10px; color: var(--muted); }
+.d-zone-legend i { flex: none; width: 7px; height: 7px; border-radius: 2px; }
+.d-zone-legend b { flex: 1; font-size: 10px; font-weight: 600; color: #b9c3d1; }
+.d-zone-legend span { font-variant-numeric: tabular-nums; color: var(--white); }
+
+.d-kv3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 12px; }
+.d-kv3 > div { padding: 11px 10px; border: 1px solid var(--line); border-radius: 14px; background: var(--panel); }
+.d-kv3 b { display: block; font-size: 21px; line-height: 1.1; font-weight: 800; font-variant-numeric: tabular-nums; color: var(--white); }
+.d-kv3 b em { margin-left: 2px; font-style: normal; font-size: 10px; color: var(--orange); }
+.d-kv3 small { display: block; margin-top: 4px; font-size: 9.5px; color: var(--muted); }
+.d-kv3-tight { margin-top: 8px; }
+
+.d-insight-list { margin-top: 12px; padding: 4px 14px 12px; border: 1px solid var(--line); border-radius: 16px; background: var(--panel); }
+.d-insight-list > div { display: flex; align-items: flex-start; gap: 8px; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,.05); }
+.d-insight-list > div:last-child { border-bottom: 0; }
+.d-insight-list span { flex: none; width: 78px; font-size: 10px; line-height: 1.6; color: var(--muted); }
+.d-insight-list b { flex: 1; font-size: 12px; line-height: 1.6; font-weight: 700; color: #e7ecf3; }
+.d-insight-list b small { font-size: 9.5px; color: var(--muted); font-weight: 600; }
+.d-insight-list em { flex: none; font-style: normal; font-size: 10px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.d-insight-list em.up { color: var(--orange); }
+.d-insight-list em.down { color: #ff8a8d; }
+.d-disclaimer { display: block; margin-top: 10px; font-size: 9.5px; line-height: 1.6; color: #6b7889; }
+
+/* 体能仪表盘 */
+.d-pmc-hero { background: linear-gradient(180deg, #141b23 0%, #0d131a 100%); }
+.d-pmc-nums { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 12px; }
+.d-pmc-nums > div { padding: 10px; border: 1px solid var(--line); border-radius: 13px; background: rgba(8,12,16,.45); }
+.d-pmc-nums b { display: block; font-size: 22px; font-weight: 800; line-height: 1.1; font-variant-numeric: tabular-nums; }
+.d-pmc-nums > div:first-child b { color: var(--orange); }
+.d-pmc-nums > div:nth-child(2) b { color: #4aa8ff; }
+.d-pmc-nums > div:nth-child(3) b { color: var(--white); }
+.d-pmc-nums small { display: block; margin-top: 3px; font-size: 9px; color: var(--muted); }
+.d-pmc-chart canvas { display: block; width: 100%; height: 172px; margin-top: 8px; }
+.d-legend { display: flex; justify-content: center; gap: 14px; padding-top: 4px; font-size: 9.5px; color: var(--muted); }
+.d-legend i { display: inline-block; width: 7px; height: 7px; margin-right: 4px; border-radius: 2px; vertical-align: -1px; }
+.d-legend i.ctl { background: var(--orange); }
+.d-legend i.atl { background: #4aa8ff; }
+.d-legend i.tsb { background: #ff4d4f; }
+
+.d-plan-card .d-plan-row { display: flex; gap: 10px; padding: 9px 0; border-bottom: 1px solid rgba(255,255,255,.05); }
+.d-plan-card .d-plan-row:last-child { border-bottom: 0; }
+.d-plan-card .d-plan-row em { flex: none; width: 32px; font-style: normal; font-size: 10px; font-weight: 700; color: var(--orange); }
+.d-plan-card .d-plan-row span { flex: 1; font-size: 11.5px; line-height: 1.6; color: #c9d2e0; }
+
+.d-param-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 10px; }
+.d-param-grid > div { padding: 9px 10px; border: 1px solid var(--line); border-radius: 12px; background: rgba(8,12,16,.4); }
+.d-param-grid span { display: block; font-size: 9px; color: var(--muted); }
+.d-param-grid b { display: block; margin-top: 3px; font-size: 12.5px; font-weight: 800; }
+.d-param-card .d-link { margin-top: 10px; }
+
+.d-moat { margin-top: 12px; padding: 14px; border: 1px solid rgba(255,121,37,.24); border-radius: 18px; background: rgba(255,121,37,.06); }
+.d-moat > b { display: block; font-size: 12.5px; font-weight: 800; color: var(--orange); }
+.d-moat > div { margin-top: 9px; font-size: 11px; line-height: 1.6; color: #c2cbd8; }
+.d-moat > div span { display: inline-block; margin-right: 6px; padding: 2px 7px; border-radius: 6px; background: rgba(255,121,37,.16); color: #ffc79e; font-size: 10px; font-weight: 700; }
+
+/* 同路段 PK / PR */
+.d-pk-row { display: flex; align-items: center; gap: 8px; padding: 9px 0; border-top: 1px solid rgba(255,255,255,.05); }
+.d-pk-row > span { flex: none; width: 74px; font-size: 10px; color: var(--muted); }
+.d-pk-row > span small { display: block; margin-top: 1px; font-size: 9px; color: #5d6b7d; }
+.d-pk-row > b { flex: none; font-size: 16px; font-weight: 800; font-variant-numeric: tabular-nums; }
+.d-pk-row.best > b { color: var(--orange); }
+.d-pk-row > em { flex: 1; font-style: normal; text-align: right; font-size: 9.5px; color: var(--muted); }
+.d-pk-delta { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+.d-pk-delta span { padding: 4px 9px; border-radius: 8px; background: rgba(255,255,255,.05); font-size: 10px; color: #c9d2e0; font-variant-numeric: tabular-nums; }
+.d-pk-delta span.up { color: var(--orange); background: rgba(255,121,37,.12); }
+.d-pk-delta span.down { color: #ff8a8d; background: rgba(255,77,79,.12); }
+.d-note { display: block; margin-top: 9px; font-size: 9.5px; line-height: 1.6; color: #6b7889; }
+
+.d-pr-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 10px; }
+.d-pr-grid > div { padding: 10px; border: 1px solid var(--line); border-radius: 13px; background: rgba(8,12,16,.4); }
+.d-pr-grid b { display: block; font-size: 18px; font-weight: 800; line-height: 1.15; font-variant-numeric: tabular-nums; }
+.d-pr-grid b em { margin-left: 2px; font-style: normal; font-size: 9.5px; color: var(--orange); font-weight: 600; }
+.d-pr-grid small { display: block; margin-top: 4px; font-size: 9px; color: var(--muted); }
+
+.d-career-nums { display: flex; align-items: baseline; gap: 6px; margin-top: 10px; }
+.d-career-nums b { font-size: 26px; font-weight: 800; font-variant-numeric: tabular-nums; color: var(--orange); }
+.d-career-nums b em { margin-left: 2px; font-style: normal; font-size: 10px; color: var(--muted); }
+.d-career-nums span { font-size: 11px; color: var(--muted); }
+.d-empty { margin-top: 8px !important; font-size: 11px; line-height: 1.6; color: var(--muted); }
+
+/* 发现页定位说明 */
+.d-moat-banner { margin-top: 4px; border-color: rgba(255,121,37,.26); background: linear-gradient(160deg, rgba(255,121,37,.1), rgba(13,19,26,.92) 60%); }
+.d-moat-title { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.d-moat-title b { font-size: 13px; font-weight: 800; }
+.d-moat-title span { font-size: 10px; font-weight: 700; }
+.d-moat-banner p { margin-top: 8px !important; font-size: 11px; line-height: 1.65; color: #c2cbd8; }
+.d-moat-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+.d-moat-tags span { padding: 4px 9px; border-radius: 8px; background: rgba(255,255,255,.05); font-size: 10px; color: #c9d2e0; font-variant-numeric: tabular-nums; }
+.d-moat-banner .d-link { margin-top: 10px; }
+
+@media (max-width: 360px) {
+  .d-zone-legend { grid-template-columns: 1fr; }
+  .d-kv3 b { font-size: 19px; }
+}
